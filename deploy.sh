@@ -1,4 +1,4 @@
-BOX_ID="josste.lamp"
+BOX_ID="JoSSte/lamp"
 vagrant destroy -f
 set -e
 vagrant up # Start the box and run any defined scripts
