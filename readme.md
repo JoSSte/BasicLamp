@@ -14,3 +14,8 @@ end
 ## Information
 
 This `.box` is meant as a root box for building LAMP environments to facilitate rapid development on several machines. The goal is to have a box with apache, php, mysql, xdebug installed and configured, as well as modsecurity preloaded to be enabled quickly if you need that installed.
+
+## TODO
+* Install and configure Xdebug https://blog.bam.tech/developer-news/configure-php-debugger-with-vscode-and-vagrant
+* Figure out why MySQL port forwarding fails
+
