@@ -2,6 +2,13 @@ Vagrant.configure(2) do |config|
 
   config.vm.box = "ubuntu/hirsute64"
 
+  #forward mysql port
+  config.vm.network "forwarded_port", guest: 3306, host: 3309, guest_ip: '127.0.0.1', host_ip: '127.0.0.1'
+
+  config.vm.provision "file", 
+    source: "./conf/xdebug.ini", 
+    destination: "/tmp/xdebug.ini"
+
   config.vm.provider "virtualbox" do |vb|
 
   #   vb.gui = true

@@ -11,6 +11,22 @@ Vagrant.configure(2) do |config|
 end
 ```
 
+## Debugging
+
+Make sure your .vscode/launch.json contains this:
+``` json
+{
+    "name": "Listen for XDebug",
+    "type": "php",
+    "request": "launch",
+    "pathMappings": {
+        "/var/www/<yourfolder on vagrant>": "${workspaceRoot}/src"
+    },
+    "port": 9000,
+    "log" :  true
+}
+```
+
 ## Information
 
 This `.box` is meant as a root box for building LAMP environments to facilitate rapid development on several machines. The goal is to have a box with apache, php, mysql, xdebug installed and configured, as well as modsecurity preloaded to be enabled quickly if you need that installed.
