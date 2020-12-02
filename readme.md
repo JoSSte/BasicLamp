@@ -1,5 +1,7 @@
 # Vagrant LAMP box
 
+This is my gold image for working with apache and PHP
+
 ## Usage
 * Execute `deploy.sh` and import the box in your vagrant file
 
