@@ -33,6 +33,13 @@ Make sure your .vscode/launch.json contains this:
 
 This `.box` is meant as a root box for building LAMP environments to facilitate rapid development on several machines. The goal is to have a box with apache, php, mysql, xdebug installed and configured, as well as modsecurity preloaded to be enabled quickly if you need that installed.
 
+### Features
+* Ubuntu 21.04
+* Apache 2
+* php 7.4
+* xdebug enabled
+* MySQL
+
 ## TODO
 * Install and configure Xdebug https://blog.bam.tech/developer-news/configure-php-debugger-with-vscode-and-vagrant
 * Figure out why MySQL port forwarding fails
