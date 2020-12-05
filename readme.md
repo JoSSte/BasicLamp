@@ -36,7 +36,7 @@ This `.box` is meant as a root box for building LAMP environments to facilitate 
 ### Features
 * Ubuntu 21.04
 * Apache 2
-* php 7.4
+* php 8
 * xdebug enabled
 * MySQL
 
