@@ -36,4 +36,5 @@ This `.box` is meant as a root box for building LAMP environments to facilitate 
 ## TODO
 * Install and configure Xdebug https://blog.bam.tech/developer-news/configure-php-debugger-with-vscode-and-vagrant
 * Figure out why MySQL port forwarding fails
+* Versioning [link 1](https://www.vagrantup.com/docs/boxes/format) [link 2](https://martincarstenbach.wordpress.com/2020/05/05/versioning-for-your-local-vagrant-boxes-adding-a-new-box/)
 
