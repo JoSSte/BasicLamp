@@ -2,7 +2,7 @@
 
 sudo sed -i 's/AcceptEnv/\#AcceptEnv/g' /etc/ssh/sshd_config
 sudo /etc/init.d/ssh reload
-sudo apt install software-properties-common
+sudo apt-get install software-properties-common
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo add-apt-repository ppa:ondrej/php
