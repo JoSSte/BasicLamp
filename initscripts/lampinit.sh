@@ -6,7 +6,7 @@ sudo /etc/init.d/ssh reload
 ### INSTALL APT PACKAGES ###
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
-sudo apt-get install -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-zip php-xdebug php-pear* git
+sudo apt-get install -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-mbstring php7.4-zip php-xdebug php-pear* git
 #pre-fetch modsecurity without installing it
 sudo apt-get install --download-only libapache2-mod-security2 liblua5.1-0 libyajl2 modsecurity-crs
 sudo apt-get upgrade -y
