@@ -1,6 +1,6 @@
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/groovy64"
+  config.vm.box = "ubuntu/impish64"
 
   #forward mysql port
   config.vm.network "forwarded_port", guest: 3306, host: 3309, guest_ip: '127.0.0.1', host_ip: '127.0.0.1'

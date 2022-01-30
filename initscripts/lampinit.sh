@@ -6,14 +6,15 @@ sudo /etc/init.d/ssh reload
 ### INSTALL APT PACKAGES ###
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
-sudo apt-get install -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-zip php-xdebug php-pear* git
+sudo apt-get upgrade -y
+sudo apt-get install -y apache2 php8.0-curl php8.0-gd apache2 mysql-server php8.0 unzip php8.0-mysql php8.0-zip php8.0-mbstring php-xdebug php-pear* git
 #pre-fetch modsecurity without installing it
 sudo apt-get install --download-only libapache2-mod-security2 liblua5.1-0 libyajl2 modsecurity-crs
 sudo apt-get upgrade -y
 
 ### APACHE ###
 # Copy xdebug config to proper location
-sudo mv /tmp/xdebug.ini /etc/php/7.4/mods-available/xdebug.ini
+sudo mv /tmp/xdebug.ini /etc/php/8.0/mods-available/xdebug.ini
 
 # Enable mod_ssl
 sudo a2enmod -q ssl
