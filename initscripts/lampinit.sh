@@ -14,10 +14,11 @@ sudo sed -i 's/archive.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
 sudo apt-mark hold openssh-server
 
 sudo apt-get update
-sudo apt-get install -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::="--force-confnew" --allow-unauthenticated  --allow-downgrades  --allow-remove-essential  --allow-change-held-packages -f -q -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-zip php-xdebug php-pear* git
+# -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::="--force-confnew" --allow-unauthenticated  --allow-downgrades  --allow-remove-essential  --allow-change-held-packages -f -q
+sudo apt-get install  -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-zip php-xdebug php-pear* git
 #pre-fetch modsecurity without installing it
 sudo apt-get install --download-only libapache2-mod-security2 liblua5.1-0 libyajl2 modsecurity-crs
-sudo apt-get upgrade -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::="--force-confnew" --allow-unauthenticated  --allow-downgrades  --allow-remove-essential  --allow-change-held-packages -f -q -y
+sudo apt-get upgrade -y
 
 ### APACHE ###
 # Copy xdebug config to proper location
