@@ -31,7 +31,15 @@ Make sure your .vscode/launch.json contains this:
 
 ## Information
 
-This `.box` is meant as a root box for building LAMP environments to facilitate rapid development on several machines. The goal is to have a box with apache, php, mysql, xdebug installed and configured, as well as modsecurity preloaded to be enabled quickly if you need that installed.
+This `.box` is meant as a golden image for building LAMP environments to facilitate rapid development on several machines. The goal is to have a box with apache, php, mysql, xdebug installed and configured, as well as modsecurity preloaded to be enabled quickly if you need that installed.
+
+### MySQL
+* Set up to listen on port 3306 on all ips
+* no ports forwarded as default
+* User: `vagrant`
+* Pass: `secret`
+
+
 
 ### Features
 * Ubuntu 21.04
@@ -41,6 +49,5 @@ This `.box` is meant as a root box for building LAMP environments to facilitate 
 * MySQL
 
 ## TODO
-* Install and configure Xdebug https://blog.bam.tech/developer-news/configure-php-debugger-with-vscode-and-vagrant
-* Figure out why MySQL port forwarding fails
+* Versioning [link 1](https://www.vagrantup.com/docs/boxes/format) [link 2](https://martincarstenbach.wordpress.com/2020/05/05/versioning-for-your-local-vagrant-boxes-adding-a-new-box/)
 
