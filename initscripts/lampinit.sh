@@ -7,11 +7,11 @@ sudo /etc/init.d/ssh reload
 export DEBIAN_FRONTEND=noninteractive
 
 #fix apt sources.list
-sudo sed -i 's/archive.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
+#sudo sed -i 's/archive.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
 #sudo sed -i 's/deb http://security/\#deb http://security/g' /etc/apt/sources.list
 
 #mark openssh-server hold to avoid dialog
-sudo apt-mark hold openssh-server
+#sudo apt-mark hold openssh-server
 
 sudo apt-get update
 sudo apt-get install -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-mbstring php7.4-zip php-xdebug php-pear* git
