@@ -5,6 +5,14 @@ sudo /etc/init.d/ssh reload
 
 ### INSTALL APT PACKAGES ###
 export DEBIAN_FRONTEND=noninteractive
+
+#fix apt sources.list
+#sudo sed -i 's/archive.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
+#sudo sed -i 's/deb http://security/\#deb http://security/g' /etc/apt/sources.list
+
+#mark openssh-server hold to avoid dialog
+#sudo apt-mark hold openssh-server
+
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y apache2 php8.0-curl php8.0-gd apache2 mysql-server php8.0 unzip php8.0-mysql php8.0-zip php8.0-mbstring php-xdebug php-pear* git
