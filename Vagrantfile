@@ -1,6 +1,6 @@
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "ubuntu/impish64"
+  config.vm.box = "ubuntu/jammy64"
 
   #forward mysql port
   config.vm.network "forwarded_port", guest: 3306, host: 3309, guest_ip: '127.0.0.1', host_ip: '127.0.0.1'
@@ -20,6 +20,7 @@ Vagrant.configure(2) do |config|
     # Configure cached packages to be shared between instances of the same base box.
     # More info on http://fgrehm.viewdocs.io/vagrant-cachier/usage
     config.cache.scope = :box
+    #config.ssh.username = "ubuntu"
 
     # OPTIONAL: If you are using VirtualBox, you might want to use that to enable
     # NFS for shared folders. This is also very useful for vagrant-libvirt if you

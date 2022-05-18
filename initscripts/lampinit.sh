@@ -15,14 +15,17 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y apache2 php8.0-curl php8.0-gd apache2 mysql-server php8.0 unzip php8.0-mysql php8.0-zip php8.0-mbstring php-xdebug php-pear* git
+sudo apt-get install -y apache2 php8.1-curl php8.1-gd apache2 mysql-server php8.1 unzip php8.1-mysql php8.1-zip php8.1-mbstring php-xdebug php-pear* git
 #pre-fetch modsecurity without installing it
 sudo apt-get install --download-only libapache2-mod-security2 liblua5.1-0 libyajl2 modsecurity-crs
 sudo apt-get upgrade -y
 
 ### APACHE ###
 # Copy xdebug config to proper location
-sudo mv /tmp/xdebug.ini /etc/php/8.0/mods-available/xdebug.ini
+sudo mv /tmp/xdebug.ini /etc/php/8.1/mods-available/xdebug.ini
+sudo touch /var/log/apache2/xdebug.log
+sudo chmod 777 /var/log/apache2/xdebug.log
+
 
 # Enable mod_ssl
 sudo a2enmod -q ssl
