@@ -15,7 +15,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y apache2 php8.1-curl php8.1-gd apache2 mysql-server php8.1 unzip php8.1-mysql php8.1-zip php8.1-mbstring php-xdebug php-pear* git
+sudo apt-get install -y apache2 git unzip mysql-server php8.1-curl php8.1-gd php8.1 php8.1-mysql php8.1-zip php8.1-mbstring php8.1-xml php-xdebug php-pear*
 #pre-fetch modsecurity without installing it
 sudo apt-get install --download-only libapache2-mod-security2 liblua5.1-0 libyajl2 modsecurity-crs
 sudo apt-get upgrade -y
