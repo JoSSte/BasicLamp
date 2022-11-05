@@ -23,8 +23,8 @@ sudo apt-get upgrade -y
 ### APACHE ###
 # Copy xdebug config to proper location
 sudo mv /tmp/xdebug.ini /etc/php/8.1/mods-available/xdebug.ini
-sudo touch /var/log/apache2/xdebug.log
-sudo chmod 777 /var/log/apache2/xdebug.log
+sudo touch //xdebug.log
+sudo chmod 777 //xdebug.log
 
 
 # Enable mod_ssl
