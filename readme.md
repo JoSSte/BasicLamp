@@ -1,6 +1,7 @@
 # Vagrant LAMP box
 
 This is my gold image for working with apache and PHP
+https://app.vagrantup.com/JoSSte/boxes/lamp 
 
 ## Usage
 * Execute `deploy.sh` and import the box in your vagrant file
@@ -8,12 +9,13 @@ This is my gold image for working with apache and PHP
 ``` ruby
 Vagrant.configure(2) do |config|
   config.vm.box = "JoSSte/lamp"
+  config.vm.box_version = "2.0.2"
   config.vm.define "coolVMName"
   ...
 end
 ```
 
-## Debugging
+## Debugging in Visual Studio Code
 
 Make sure your .vscode/launch.json contains this:
 ``` json
@@ -39,8 +41,4 @@ This `.box` is meant as a golden image for building LAMP environments to facilit
 * User: `vagrant`
 * Pass: `secret`
 
-
-
-## TODO
-* Versioning [link 1](https://www.vagrantup.com/docs/boxes/format) [link 2](https://martincarstenbach.wordpress.com/2020/05/05/versioning-for-your-local-vagrant-boxes-adding-a-new-box/)
 
