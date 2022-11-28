@@ -7,15 +7,14 @@ sudo /etc/init.d/ssh reload
 export DEBIAN_FRONTEND=noninteractive
 
 #fix apt sources.list
-sudo sed -i 's/archive.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
+#sudo sed -i 's/archive.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
 #sudo sed -i 's/deb http://security/\#deb http://security/g' /etc/apt/sources.list
 
 #mark openssh-server hold to avoid dialog
-sudo apt-mark hold openssh-server
+#sudo apt-mark hold openssh-server
 
 sudo apt-get update
-# -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::="--force-confnew" --allow-unauthenticated  --allow-downgrades  --allow-remove-essential  --allow-change-held-packages -f -q
-sudo apt-get install  -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-zip php-xdebug php-pear* git
+sudo apt-get install -y apache2 php7.4-curl php7.4-gd apache2 mysql-server php7.4 unzip php7.4-mysql php7.4-mbstring php7.4-zip php-xdebug php-pear* git
 #pre-fetch modsecurity without installing it
 sudo apt-get install --download-only libapache2-mod-security2 liblua5.1-0 libyajl2 modsecurity-crs
 sudo apt-get upgrade -y
